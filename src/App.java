@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class App {
@@ -35,20 +36,27 @@ public class App {
     //Finish the countWords method that will take in a sentence String and return
     //the number of words in that sentence.
     public static int countWords(String sentence){
-        return -1;
+        String[] words = sentence.split(" ");
+    return words.length;
     }
 
     //Complete firstWord method that will take in a sentence String and return
     //the first word
     public static String firstWord(String sentence){
-        return null;
+        String[] words = sentence.split(" ");
+        return words[0];
     }
 
     //Finish the reverseWords method that will take in a sentence String and return
     //an array with the words reversed
     public static String[] reverseWords(String sentence){
-        return null;
-
+       
+        String[] words = sentence.split(" ");
+        String[] word2 = new String[words.length];
+        for (int i = words.length - 1; i >= 0; i--) {
+            word2[words.length - 1 - i] = words[i];
+        }
+    return word2;
     }
 
     //Finish the extractDomain method that will take in an email address with the
